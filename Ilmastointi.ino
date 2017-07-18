@@ -152,7 +152,7 @@ void loop() {
 		}
 		Blink(LED, 3);
 		Serial.println();
-		switch (radio.DATA[0])
+/*		switch (radio.DATA[0])
 		{
 		case TIME:
 			//4:12:20:46
@@ -177,15 +177,15 @@ void loop() {
 			Serial.print(measInterval);
 			Serial.println();
 			break;
-		}
+		}*/
 	}
 
 	int currPeriod = millis() / (measInterval*1000);
 	if (currPeriod != lastPeriod)
 	{
 		lastPeriod = currPeriod;
-		lcd.setCursor(0, 1);
-		lcd.print(currPeriod);
+		//lcd.setCursor(0, 1);
+		//lcd.print(currPeriod);
 
 	}
 }
